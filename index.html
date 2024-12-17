@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-do List</h1>
+        
+        <!-- Task Input Form -->
+        <form id="task-form">
+            <input type="text" id="task-name" placeholder="Task Name" required>
+            <input type="date" id="task-date" required>
+            <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">+ Add</button>
+        </form>
+
+        <!-- Task Filter and Search -->
+        <div class="task-controls">
+            <input type="text" id="search-bar" placeholder="Search tasks...">
+            <select id="sort-select">
+                <option value="date">Sort by Date</option>
+                <option value="priority">Sort by Priority</option>
+                <option value="name">Sort by Name</option>
+            </select>
+        </div>
+
+        <!-- Task List -->
+        <div id="task-list"></div>
+
+        <!-- Stats Dashboard -->
+        <div id="task-stats">
+            <p>Total Tasks: <span id="total-tasks">0</span></p>
+            <p>Completed Tasks: <span id="completed-tasks">0</span></p>
+            <p>Overdue Tasks: <span id="overdue-tasks">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
